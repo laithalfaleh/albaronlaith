@@ -1,21 +1,24 @@
 backend:
   name: github
-  repo: laithalfaleh/albaronlaith
+  repo: laithalfaleh/albaronlaith  # اسم المستودع بالضبط
   branch: main
+  auth_scope: repo
 
-media_folder: "assets/images"
-public_folder: "/assets/images"
+publish_mode: editorial_workflow
 
-locale: "ar"
+media_folder: "images/uploads"     # مجلد رفع الصور داخل المستودع
+public_folder: "/images/uploads"   # مسار الصور على الموقع
+
+site_url: https://laithalfaleh.github.io/albaronlaith
 
 collections:
-  - name: "blog"
-    label: "المقالات"
-    folder: "blog"
+  - name: "posts"
+    label: "مقالات"
+    folder: "posts"
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "العنوان", name: "title", widget: "string"}
-      - {label: "التاريخ", name: "date", widget: "datetime"}
-      - {label: "موجز", name: "summary", widget: "text", required: false}
-      - {label: "المحتوى", name: "body", widget: "markdown"}
+      - { label: "العنوان", name: "title", widget: "string" }
+      - { label: "التاريخ", name: "date", widget: "datetime" }
+      - { label: "الصورة", name: "thumbnail", widget: "image" }
+      - { label: "المحتوى", name: "body", widget: "markdown" }
