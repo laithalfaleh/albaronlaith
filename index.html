@@ -1,113 +1,109 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>البارون للقانون والتحكيم</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>البارون للقانون والتحكيم | مكتب المحامي ليث خلف الفالح</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
-    <!-- شريط التنقل -->
-    <nav class="law-navbar">
-        <div class="law-logo-container">
-            <img src="images/logo.png" alt="شعار المكتب" class="law-logo">
-        </div>
-        
-        <ul class="law-nav-links" id="mainMenu">
-            <li><a href="#law-home" class="nav-active">الرئيسية</a></li>
-            <li><a href="#law-services">الخدمات</a></li>
-            <li><a href="#law-about">من نحن</a></li>
-            <li><a href="#law-blog">المدونة</a></li>
-            <li><a href="#law-contact">اتصل بنا</a></li>
-        </ul>
-        
-        <div class="law-menu-toggle" id="mobileMenu">
-            <i class="fas fa-bars"></i>
-        </div>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="images/logo.png" alt="شعار البارون" />
+      </div>
+      <ul>
+        <li><a href="#home">الرئيسية</a></li>
+        <li><a href="#services">الخدمات</a></li>
+        <li><a href="about.html">من نحن</a></li>
+        <li><a href="#blog">المدونة</a></li>
+        <li><a href="#contact">اتصل بنا</a></li>
+      </ul>
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
     </nav>
+  </header>
 
-    <!-- القسم الرئيسي -->
-    <section id="law-home" class="law-hero-section">
-        <div class="law-hero-content">
-            <h1 class="law-main-heading">
-                حلول قانونية <span>استثنائية</span>
-            </h1>
-            <p class="law-subheading">
-                خبرة واسعة في التحكيم الدولي والترافع القضائي
-            </p>
-            <a href="#law-contact" class="law-cta-btn">احجز استشارة مجانية</a>
-        </div>
-    </section>
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h2>حلول قانونية <span>استثنائية</span></h2>
+      <p>نقدم استشارات قانونية متخصصة في التحكيم والقضاء</p>
+      <a href="#contact" class="cta-button">احجز استشارة الآن</a>
+    </div>
+  </section>
 
-    <!-- قسم الخدمات -->
-    <section id="law-services" class="law-services-section">
-        <h2 class="law-section-title">خدماتنا القانونية</h2>
-        <div class="law-services-grid">
-            <!-- سيتم إضافة البطاقات عبر JavaScript -->
-        </div>
-    </section>
+  <section id="services" class="services">
+    <h2>خدماتنا</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <i class="fas fa-gavel"></i>
+        <h3>التحكيم التجاري</h3>
+        <p>حل النزاعات خارج المحاكم بسرية تامة.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-balance-scale"></i>
+        <h3>الترافع القضائي</h3>
+        <p>تمثيل العملاء أمام جميع المحاكم.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-file-contract"></i>
+        <h3>صياغة العقود</h3>
+        <p>صياغة عقود تحكيم وتجارية دقيقة.</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- قسم المدونة -->
-    <section id="law-blog" class="law-blog-section">
-        <h2 class="law-section-title">أحدث المقالات</h2>
-        <div class="law-blog-posts" id="blogPosts">
-            <!-- سيتم تحميل المقالات هنا -->
-        </div>
-    </section>
+  <section id="blog" class="blog">
+    <h2>أحدث المقالات</h2>
+    <div class="blog-posts">
+      <div class="post-card">
+        <h3>كيفية اختيار محكم مناسب لنزاعك</h3>
+        <p>نصائح قانونية لضمان حياد المحكمين.</p>
+        <a href="#">اقرأ المزيد</a>
+      </div>
+      <div class="post-card">
+        <h3>الفرق بين التحكيم والقضاء</h3>
+        <p>مقارنة بين آليات حل النزاعات.</p>
+        <a href="#">اقرأ المزيد</a>
+      </div>
+    </div>
+  </section>
 
-    <!-- نموذج الاتصال -->
-    <section id="law-contact" class="law-contact-section">
-        <div class="law-contact-form">
-            <form id="contactForm" action="https://formsubmit.co/your@email.com" method="POST">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_next" value="thanks.html">
-                
-                <div class="law-form-group">
-                    <input type="text" name="name" placeholder="الاسم الكامل" required>
-                    <i class="fas fa-user"></i>
-                </div>
-                
-                <div class="law-form-group">
-                    <input type="email" name="email" placeholder="البريد الإلكتروني" required>
-                    <i class="fas fa-envelope"></i>
-                </div>
-                
-                <div class="law-form-group">
-                    <textarea name="message" placeholder="رسالتك..." required></textarea>
-                    <i class="fas fa-comment"></i>
-                </div>
-                
-                <button type="submit" class="law-submit-btn">
-                    إرسال الرسالة
-                    <i class="fas fa-paper-plane"></i>
-                </button>
-            </form>
-        </div>
-    </section>
+  <section id="contact" class="contact">
+    <h2>تواصل معنا</h2>
+    <form action="https://formsubmit.co/laithalfaleh93@yahoo.com" method="POST">
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="hidden" name="_next" value="thanks.html" />
 
-    <!-- تذييل الصفحة -->
-    <footer class="law-footer">
-        <div class="law-footer-content">
-            <div class="law-footer-section">
-                <h4>معلومات التواصل</h4>
-                <p><i class="fas fa-map-marker-alt"></i> عمان، الأردن</p>
-                <p><i class="fas fa-phone"></i> +962 782 328 189</p>
-            </div>
-            <div class="law-footer-section">
-                <h4>الروابط السريعة</h4>
-                <ul>
-                    <li><a href="#law-home">الرئيسية</a></li>
-                    <li><a href="#law-services">الخدمات</a></li>
-                    <li><a href="#law-about">من نحن</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="law-copyright">
-            <p>© 2024 جميع الحقوق محفوظة - مكتب البارون للقانون</p>
-        </div>
-    </footer>
+      <input type="text" name="الاسم" placeholder="الاسم الكامل" required />
+      <input type="email" name="البريد" placeholder="البريد الإلكتروني" required />
+      <input type="tel" name="الهاتف" placeholder="رقم الهاتف" />
+      <textarea name="الرسالة" placeholder="رسالتك" required></textarea>
 
-    <script src="js/main.js"></script>
+      <button type="submit">إرسال <i class="fas fa-paper-plane"></i></button>
+    </form>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <h3>البارون للقانون والتحكيم</h3>
+        <p>مكتب المحامي ليث خلف الفالح</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://wa.me/+962782328189" target="_blank" title="تواصل عبر واتساب">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+    <p class="copyright">© 2024 جميع الحقوق محفوظة</p>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
