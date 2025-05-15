@@ -1,18 +1,18 @@
 backend:
   name: github
-  repo: laithalfaleh/albaronlaith    # اسم مستودعك على GitHub
-  branch: main                       # الفرع الرئيسي
-  app_id: "Ov23lihjskBvJs97vKRj"    # Client ID من تطبيق GitHub OAuth
+  repo: laithalfaleh/albaronlaith
+  branch: main
+  app_id: "Ov23lihjskBvJs97vKRj"
 
-media_folder: "assets/images"       # مجلد رفع الصور في المستودع (مثلاً)
-public_folder: "/assets/images"     # مسار الصور لعرضها في الموقع
+media_folder: "assets/images"
+public_folder: "/assets/images"
 
 collections:
-  - name: "posts"                   # اسم المجموعة (مثلاً: مقالات المدونة)
+  - name: "posts"
     label: "المقالات"
-    folder: "posts"                 # المجلد في المستودع لوضع ملفات المقالات
-    create: true                   # تفعيل إنشاء مقالات جديدة من لوحة الإدارة
-    slug: "{{slug}}"               # عنوان URL للمقالة يُولد تلقائياً
+    folder: "posts"
+    create: true
+    slug: "{{slug}}"
     fields:
       - { label: "العنوان", name: "title", widget: "string" }
       - { label: "التاريخ", name: "date", widget: "datetime" }
