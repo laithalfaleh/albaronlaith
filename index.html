@@ -3,119 +3,245 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>البارون للقانون والتحكيم | مكتب المحامي ليث خلف الفالح</title>
-    <link rel="stylesheet" href="style.css">
+    <title>البارون للقانون والتحكيم</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* التنسيقات الأساسية */
+        :root {
+            --primary: #2A3F54;
+            --accent: #D4AF37;
+            --light: #F8F9FA;
+            --dark: #212529;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', sans-serif;
+        }
+
+        body {
+            background: var(--light);
+            line-height: 1.6;
+        }
+
+        /* الترويسة */
+        header {
+            background: var(--primary);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 60px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        /* القسم الرئيسي */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.7), url('law-bg.jpg') center/cover;
+            color: white;
+            padding: 0 1rem;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content h1 span {
+            color: var(--accent);
+        }
+
+        /* الخدمات */
+        .services {
+            padding: 5rem 1rem;
+            background: white;
+        }
+
+        .services-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* التواصل */
+        .contact {
+            padding: 5rem 1rem;
+            background: var(--primary);
+            color: white;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button {
+            background: var(--accent);
+            color: var(--primary);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: opacity 0.3s;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        /* التذييل */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        /* التجاوب */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- شريط التنقل -->
     <header>
         <nav>
             <div class="logo">
-                <img src="logo.png" alt="شعار البارون" style="height: 60px; border-radius: 8px;">
+                <img src="logo.png" alt="شعار المكتب">
             </div>
-            <ul>
+            
+            <ul class="nav-links">
                 <li><a href="#home">الرئيسية</a></li>
                 <li><a href="#services">الخدمات</a></li>
-                <li><a href="about.html">من نحن</a></li>
-                <li><a href="#blog">المدونة</a></li>
+                <li><a href="#about">من نحن</a></li>
                 <li><a href="#contact">اتصل بنا</a></li>
             </ul>
-            <div class="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
         </nav>
     </header>
 
-    <!-- الصفحة الرئيسية -->
-    <section id="home" class="hero">
+    <section class="hero" id="home">
         <div class="hero-content">
-            <h2>حلول قانونية <span>استثنائية</span></h2>
-            <p>نقدم استشارات قانونية متخصصة في التحكيم والقضاء</p>
-            <a href="#contact" class="cta-button">احجز استشارة الآن</a>
+            <h1>حلول قانونية <span>استثنائية</span></h1>
+            <p>التميز في تقديم الاستشارات القانونية والتحكيم الدولي</p>
+            <a href="#contact" class="cta-btn">احجز استشارة</a>
         </div>
     </section>
 
-    <!-- الخدمات -->
-    <section id="services" class="services">
-        <h2>خدماتنا</h2>
+    <section class="services" id="services">
         <div class="services-grid">
             <div class="service-card">
-                <i class="fas fa-gavel"></i>
+                <i class="fas fa-gavel fa-3x"></i>
                 <h3>التحكيم التجاري</h3>
-                <p>حل النزاعات خارج المحاكم بسرية تامة.</p>
+                <p>حل النزاعات بسرية تامة خارج نطاق المحاكم</p>
             </div>
-            <div class="service-card">
-                <i class="fas fa-balance-scale"></i>
-                <h3>الترافع القضائي</h3>
-                <p>تمثيل العملاء أمام جميع المحاكم.</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-file-contract"></i>
-                <h3>صياغة العقود</h3>
-                <p>صياغة عقود تحكيم وتجارية دقيقة.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- عن المكتب -->
-    <section id="about" class="about">
-        <div class="about-content">
-            <h2>عن المكتب</h2>
-            <p>مكتب <strong>البارون للقانون والتحكيم</strong> يقدم خدمات قانونية متخصصة بقيادة المحامي <strong>ليث خلف الفالح</strong>، الحاصل على ماجستير في القانون من جامعة آل البيت، مع خبرة واسعة في التحكيم والقضاء.</p>
-        </div>
-    </section>
-
-    <!-- المدونة -->
-    <section id="blog" class="blog">
-        <h2>أحدث المقالات</h2>
-        <div class="blog-posts">
-            <div class="post-card">
-                <h3>كيفية اختيار محكم مناسب لنزاعك</h3>
-                <p>نصائح قانونية لضمان حياد المحكمين.</p>
-                <a href="#">اقرأ المزيد</a>
-            </div>
-            <div class="post-card">
-                <h3>الفرق بين التحكيم والقضاء</h3>
-                <p>مقارنة بين آليات حل النزاعات.</p>
-                <a href="#">اقرأ المزيد</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- اتصل بنا -->
-    <section id="contact" class="contact">
-        <h2>تواصل معنا</h2>
-        <form action="https://formsubmit.co/laithalfaleh93@yahoo.com" method="POST">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_next" value="thanks.html">
             
+            <div class="service-card">
+                <i class="fas fa-balance-scale fa-3x"></i>
+                <h3>الترافع القضائي</h3>
+                <p>تمثيل قانوني محترف أمام جميع المحاكم</p>
+            </div>
+            
+            <div class="service-card">
+                <i class="fas fa-file-contract fa-3x"></i>
+                <h3>صياغة العقود</h3>
+                <p>صياغة عقود دقيقة وفق أعلى المعايير القانونية</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <form class="contact-form" action="https://formsubmit.co/your-email@example.com" method="POST">
             <input type="text" name="name" placeholder="الاسم الكامل" required>
             <input type="email" name="email" placeholder="البريد الإلكتروني" required>
-            <input type="tel" name="phone" placeholder="رقم الهاتف">
-            <textarea name="message" placeholder="رسالتك" required></textarea>
-            
-            <button type="submit">إرسال <i class="fas fa-paper-plane"></i></button>
+            <textarea name="message" placeholder="رسالتك..." rows="5" required></textarea>
+            <button type="submit">إرسال الرسالة</button>
         </form>
     </section>
 
-    <!-- تذييل الصفحة -->
     <footer>
-        <div class="footer-content">
-            <div class="footer-logo">
-                <h3>البارون للقانون والتحكيم</h3>
-                <p>مكتب المحامي ليث خلف الفالح</p>
-            </div>
-            <div class="footer-links">
-                <a href="https://wa.me/+962782328189" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fas fa-envelope"></i></a>
-            </div>
-        </div>
-        <p class="copyright">© 2024 جميع الحقوق محفوظة</p>
+        <p>© 2024 البارون للقانون والتحكيم. جميع الحقوق محفوظة</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // إضافة تفاعل للقائمة على الهاتف
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // إضافة تأثير سلس للروابط
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
