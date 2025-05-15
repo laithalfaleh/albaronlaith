@@ -1,6 +1,5 @@
 // تنبيه عند إرسال النموذج
 document.querySelector('form').addEventListener('submit', function(e) {
-    e.preventDefault();
     alert('تم إرسال رسالتك بنجاح! سنتواصل معك خلال 24 ساعة.');
     this.reset();
 });
