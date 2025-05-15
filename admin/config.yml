@@ -2,19 +2,20 @@ backend:
   name: github
   repo: laithalfaleh/albaronlaith
   branch: main
-  app_id: "Ov23lihjskBvJs97vKRj"
+  base_url: https://decap-cms-auth.netlify.app
+  app_id: "1280815"
 
-media_folder: "assets/images"
-public_folder: "/assets/images"
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
 
 collections:
-  - name: "posts"
+  - name: "blog"
     label: "المقالات"
-    folder: "posts"
+    folder: "data"
     create: true
     slug: "{{slug}}"
     fields:
       - { label: "العنوان", name: "title", widget: "string" }
-      - { label: "التاريخ", name: "date", widget: "datetime" }
-      - { label: "الصورة", name: "thumbnail", widget: "image" }
-      - { label: "المحتوى", name: "body", widget: "markdown" }
+      - { label: "الصورة", name: "image", widget: "image" }
+      - { label: "الملخص", name: "excerpt", widget: "text" }
+      - { label: "المحتوى", name: "content", widget: "markdown" }
