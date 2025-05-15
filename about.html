@@ -4,8 +4,97 @@
     <meta charset="UTF-8">
     <title>من نحن | البارون للقانون والتحكيم</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"> <!-- هذا نفس ملف التنسيق اللي تستخدمه -->
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* تنسيقات خاصة بصفحة من نحن */
+        .about-page {
+            padding: 100px 20px 60px;
+            background: linear-gradient(to bottom, #f9f9f9 0%, #ffffff 100%);
+        }
+
+        .profile-card {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .profile-img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 3px solid #d4af37;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.03);
+        }
+
+        .qualifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .section-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border-left: 4px solid #2a3f54;
+        }
+
+        .section-card h3 {
+            color: #2a3f54;
+            margin-bottom: 20px;
+            position: relative;
+            padding-right: 30px;
+        }
+
+        .section-card h3::before {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            background: #d4af37;
+            border-radius: 50%;
+        }
+
+        .publication-item {
+            border-bottom: 1px solid #eee;
+            padding: 15px 0;
+            display: flex;
+            gap: 15px;
+            align-items: start;
+        }
+
+        .publication-icon {
+            font-size: 1.5em;
+            color: #d4af37;
+            min-width: 30px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .profile-card {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .profile-img {
+                max-width: 250px;
+                margin: 0 auto;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -13,10 +102,13 @@
     <header>
         <nav>
             <div class="logo">
-                <h1><span>البارون</span> للقانون والتحكيم</h1>
-                <p>مكتب المحامي ليث خلف الفالح</p>
+                <img src="logo.png.jpeg" alt="شعار البارون" class="logo-img">
+                <div class="logo-text">
+                    <h1><span>البارون</span> للقانون والتحكيم</h1>
+                    <p>مكتب المحامي ليث خلف الفالح</p>
+                </div>
             </div>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="index.html">الرئيسية</a></li>
                 <li><a href="index.html#services">الخدمات</a></li>
                 <li><a href="about.html" class="active">من نحن</a></li>
@@ -29,65 +121,85 @@
         </nav>
     </header>
 
-    <!-- قسم من نحن -->
-    <section class="about" id="about" style="padding: 60px 20px; background-color: #f9f9f9;">
-        <div class="container" style="max-width: 900px; margin: auto; text-align: center;">
-            <div>
-                <img src="profile.jpg.jpeg" alt="المحامي ليث خلف الفالح" style="width: 220px; border-radius: 15px; box-shadow: 0 0 10px rgba(0,0,0,0.1); margin-bottom: 25px;">
-            </div>
-            <h2>المحامي ليث خلف الفالح</h2>
+    <!-- محتوى الصفحة -->
+    <main class="about-page">
+        <div class="profile-card">
+            <img src="profile.jpg.jpeg" alt="المحامي ليث خلف الفالح" class="profile-img">
+            
+            <div class="profile-info">
+                <h2 class="profile-name">المحامي ليث خلف الفالح</h2>
+                <p class="profile-title">محامي مرخص ومحكم معتمد</p>
+                
+                <div class="qualifications-grid">
+                    <!-- المؤهلات الأكاديمية -->
+                    <article class="section-card">
+                        <h3>المؤهلات الأكاديمية</h3>
+                        <ul class="styled-list">
+                            <li>بكالوريوس قانون - الجامعة الأردنية</li>
+                            <li>ماجستير قانون - جامعة آل البيت</li>
+                        </ul>
+                    </article>
 
-            <div style="text-align: right; margin-top: 30px;">
-                <h3>المؤهلات الأكاديمية:</h3>
-                
-                <ul>
-                    <li>درجة البكالوريوس في القانون من الجامعة الأردنية – عمان.</li>
-                    
-                 </ul>
-                    <li>درجة الماجستير في القانون من جامعة آل البيت – المفرق.</li>
-                
-                </ul>
+                    <!-- الخبرات المهنية -->
+                    <article class="section-card">
+                        <h3>الخبرات المهنية</h3>
+                        <ul class="styled-list">
+                            <li>محامٍ نظامي متدرب بنقابة المحامين الأردنيين</li>
+                            <li>محامٍ شرعي متدرب بدائرة قاضي القضاة</li>
+                        </ul>
+                    </article>
 
-                <h3>الخبرات:</h3>
-                
-                <ul>
-                    <li>محامٍ نظامي متدرب لدى نقابة المحامين النظاميين الأردنيين.</li>
-                    
-                 </ul>
-                    <li>محامٍ شرعي متدرب لدى دائرة قاضي القضاة.</li>
-                
-                </ul>
-
-                <h3>المؤلفات:</h3>
-                
-                <ul>
-                    <li>📘 <strong>كتاب:</strong> حق العدول ضمانًا لحماية المستهلك – دراسة وصفية تحليلية مقارنة في ضوء التشريعين الأردني والفرنسي.</li>
-               
-                </ul>
-                    <li>📄 <strong>بحث:</strong> المسؤولية المدنية الناجمة عن أضرار الطائرات بدون طيار – مقدم لنقابة المحامين النظاميين.</li>
-                
-                 </ul>
-                    <li>📝 عدة أبحاث قانونية متخصصة أُعدّت أثناء دراسة الماجستير.</li>
-                
-                </ul>
+                    <!-- المؤلفات القانونية -->
+                    <article class="section-card full-width">
+                        <h3>الإصدارات العلمية</h3>
+                        <div class="publication-item">
+                            <div class="publication-icon"><i class="fas fa-book"></i></div>
+                            <div>
+                                <h4>حق العدول ضمانًا لحماية المستهلك</h4>
+                                <p>دراسة مقارنة في التشريعين الأردني والفرنسي</p>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-item">
+                            <div class="publication-icon"><i class="fas fa-file-alt"></i></div>
+                            <div>
+                                <h4>المسؤولية المدنية لأضرار الطائرات بدون طيار</h4>
+                                <p>بحث مقدم لنقابة المحامين النظاميين</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
             </div>
         </div>
-    </section>
+    </main>
 
     <!-- تذييل الصفحة -->
-    <footer>
+    <footer class="main-footer">
         <div class="footer-content">
-            <div class="footer-logo">
+            <div class="footer-brand">
                 <h3>البارون للقانون والتحكيم</h3>
                 <p>مكتب المحامي ليث خلف الفالح</p>
             </div>
-            <div class="footer-links">
-                <a href="#"><i class="fab fa-whatsapp"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fas fa-envelope"></i></a>
+            
+            <div class="footer-social">
+                <a href="https://wa.me/+962782328189" target="_blank" class="social-link">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>واتساب</span>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="fab fa-linkedin"></i>
+                    <span>لينكدإن</span>
+                </a>
+                <a href="mailto:laithalfaleh93@yahoo.com" class="social-link">
+                    <i class="fas fa-envelope"></i>
+                    <span>البريد الإلكتروني</span>
+                </a>
             </div>
         </div>
-        <p class="copyright">© 2024 جميع الحقوق محفوظة</p>
+        
+        <div class="footer-legal">
+            <p class="copyright">© 2024 جميع الحقوق محفوظة لمكتب البارون للقانون والتحكيم</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
