@@ -6,14 +6,13 @@
     <title>البارون للقانون والتحكيم | مكتب المحامي ليث خلف الفالح</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
     <!-- شريط التنقل -->
     <header>
         <nav>
             <div class="logo">
-                <img src="logo.png.jpeg" alt="شعار البارون" style="height: 60px; border-radius: 8px;">
+                <img src="logo.png" alt="شعار البارون" style="height: 60px; border-radius: 8px;">
             </div>
             <ul>
                 <li><a href="#home">الرئيسية</a></li>
@@ -70,8 +69,17 @@
     <!-- المدونة -->
     <section id="blog" class="blog">
         <h2>أحدث المقالات</h2>
-        <div class="blog-posts" id="blogPosts">
-            <!-- سيتم تحميل المقالات تلقائيًا هنا -->
+        <div class="blog-posts">
+            <div class="post-card">
+                <h3>كيفية اختيار محكم مناسب لنزاعك</h3>
+                <p>نصائح قانونية لضمان حياد المحكمين.</p>
+                <a href="#">اقرأ المزيد</a>
+            </div>
+            <div class="post-card">
+                <h3>الفرق بين التحكيم والقضاء</h3>
+                <p>مقارنة بين آليات حل النزاعات.</p>
+                <a href="#">اقرأ المزيد</a>
+            </div>
         </div>
     </section>
 
@@ -81,12 +89,12 @@
         <form action="https://formsubmit.co/laithalfaleh93@yahoo.com" method="POST">
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_next" value="https://laithalfaleh.github.io/albaronlaith/thanks.html">
+            <input type="hidden" name="_next" value="thanks.html">
             
-            <input type="text" name="الاسم" placeholder="الاسم الكامل" required>
-            <input type="email" name="البريد" placeholder="البريد الإلكتروني" required>
-            <input type="tel" name="الهاتف" placeholder="رقم الهاتف">
-            <textarea name="الرسالة" placeholder="رسالتك" required></textarea>
+            <input type="text" name="name" placeholder="الاسم الكامل" required>
+            <input type="email" name="email" placeholder="البريد الإلكتروني" required>
+            <input type="tel" name="phone" placeholder="رقم الهاتف">
+            <textarea name="message" placeholder="رسالتك" required></textarea>
             
             <button type="submit">إرسال <i class="fas fa-paper-plane"></i></button>
         </form>
@@ -100,39 +108,14 @@
                 <p>مكتب المحامي ليث خلف الفالح</p>
             </div>
             <div class="footer-links">
-                <a href="https://wa.me/+962782328189" target="_blank" title="واتساب">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
-                <a href="#" title="لينكدإن">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="mailto:laithalfaleh93@yahoo.com" title="البريد الإلكتروني">
-                    <i class="fas fa-envelope"></i>
-                </a>
+                <a href="https://wa.me/+962782328189" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
         <p class="copyright">© 2024 جميع الحقوق محفوظة</p>
     </footer>
 
     <script src="script.js"></script>
-    <script>
-        // سكريبت تحميل المقالات
-        document.addEventListener('DOMContentLoaded', () => {
-            fetch('blog-posts.json')
-                .then(response => response.json())
-                .then(posts => {
-                    const container = document.getElementById('blogPosts');
-                    posts.forEach(post => {
-                        container.innerHTML += `
-                            <div class="post-card">
-                                <h3>${post.title}</h3>
-                                <p>${post.excerpt}</p>
-                                <a href="post.html?id=${post.id}">اقرأ المزيد</a>
-                            </div>
-                        `;
-                    });
-                });
-        });
-    </script>
 </body>
 </html>
