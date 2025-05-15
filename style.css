@@ -174,11 +174,59 @@ ul li a:hover {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 300px;
+    position: relative;
+}
+
+.post-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.post-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.post-card .post-meta {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 1rem;
 }
 
 .post-card a {
     color: var(--secondary-color);
     text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+/* نظام إدارة المحتوى */
+.CMS {
+    direction: rtl !important;
+    font-family: 'Tajawal' !important;
+}
+
+.CMS .cm-s-textmate.CodeMirror {
+    direction: ltr !important;
+}
+
+.CMS .form-control label {
+    float: right !important;
+    margin-left: 10px;
+    margin-right: 0 !important;
+}
+
+.CMS .form-control input,
+.CMS .form-control textarea {
+    text-align: right !important;
+    padding: 10px 15px !important;
+}
+
+.CMS .widget-markdown .editor-toolbar {
+    flex-direction: row-reverse;
 }
 
 /* اتصل بنا */
@@ -267,5 +315,11 @@ footer {
     .services-grid, .blog-posts {
         flex-direction: column;
         align-items: center;
+    }
+
+    .CMS .form-control label {
+        float: none !important;
+        display: block;
+        margin-bottom: 5px;
     }
 }
