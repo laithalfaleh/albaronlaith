@@ -3,16 +3,19 @@ backend:
   repo: laithalfaleh/albaronlaith
   branch: main
 
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
+media_folder: "assets/images"
+public_folder: "/assets/images"
+
+locale: "ar"
 
 collections:
   - name: "blog"
-    label: "المدونة"
+    label: "المقالات"
     folder: "blog"
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "العنوان", name: "title", widget: "string" }
-      - { label: "التاريخ", name: "date", widget: "datetime" }
-      - { label: "المحتوى", name: "body", widget: "markdown" }
+      - {label: "العنوان", name: "title", widget: "string"}
+      - {label: "التاريخ", name: "date", widget: "datetime"}
+      - {label: "موجز", name: "summary", widget: "text", required: false}
+      - {label: "المحتوى", name: "body", widget: "markdown"}
