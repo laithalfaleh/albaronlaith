@@ -2,85 +2,84 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>من نحن - البارن للقانون والتحكيم</title>
+    <title>من نحن | البارن للقانون والتحكيم</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"> <!-- تأكد أن ملف CSS موجود -->
+    <link rel="stylesheet" href="style.css"> <!-- هذا نفس ملف التنسيق اللي تستخدمه -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f9f9f9;
-            margin: 0;
-            padding: 0;
-            line-height: 1.8;
-        }
-
-        .about-section {
-            max-width: 800px;
-            margin: auto;
-            padding: 40px 20px;
-            text-align: center;
-            background-color: #fff;
-            box-shadow: 0 0 15px rgba(0,0,0,0.05);
-            border-radius: 12px;
-            margin-top: 50px;
-        }
-
-        .about-section img {
-            width: 200px;
-            border-radius: 12px;
-            margin-bottom: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-
-        .about-section h2 {
-            margin-bottom: 10px;
-            color: #333;
-        }
-
-        .about-section p {
-            margin: 10px 0;
-            text-align: right;
-            color: #444;
-        }
-
-        .about-section ul {
-            text-align: right;
-            list-style-type: disc;
-            padding-right: 20px;
-            margin: 10px 0 20px;
-        }
-
-        .about-section ul li {
-            margin-bottom: 10px;
-        }
-    </style>
 </head>
 <body>
 
-    <section class="about-section">
-        <img src="profile.jpg.jpeg" alt="المحامي ليث خلف الفالح">
-        <h2>المحامي ليث خلف الفالح</h2>
+    <!-- شريط التنقل -->
+    <header>
+        <nav>
+            <div class="logo">
+                <h1><span>البارن</span> للقانون والتحكيم</h1>
+                <p>مكتب المحامي ليث خلف الفالح</p>
+            </div>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="index.html#services">الخدمات</a></li>
+                <li><a href="about.html" class="active">من نحن</a></li>
+                <li><a href="index.html#blog">المدونة</a></li>
+                <li><a href="index.html#contact">اتصل بنا</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
 
-        <p><strong>المؤهلات الأكاديمية:</strong></p>
-        <ul>
-            <li>درجة البكالوريوس في القانون من الجامعة الأردنية – عمان.</li>
-            <li>درجة الماجستير في القانون من جامعة آل البيت – المفرق.</li>
-        </ul>
+    <!-- قسم من نحن -->
+    <section class="about" id="about" style="padding: 60px 20px; background-color: #f9f9f9;">
+        <div class="container" style="max-width: 900px; margin: auto; text-align: center;">
+            <div>
+                <img src="profile.jpg.jpeg" alt="المحامي ليث خلف الفالح" style="width: 220px; border-radius: 15px; box-shadow: 0 0 10px rgba(0,0,0,0.1); margin-bottom: 25px;">
+            </div>
+            <h2>المحامي ليث خلف الفالح</h2>
 
-        <p><strong>الخبرات:</strong></p>
-        <ul>
-            <li>محامٍ نظامي متدرب لدى نقابة المحامين النظاميين الأردنيين.</li>
-            <li>محامٍ شرعي متدرب لدى دائرة قاضي القضاة.</li>
-        </ul>
+            <div style="text-align: right; margin-top: 30px;">
+                <h3>المؤهلات الأكاديمية:</h3>
+                <ul>
+                    <li>درجة البكالوريوس في القانون من الجامعة الأردنية – عمان.</li>
+                 </ul>
+                    <li>درجة الماجستير في القانون من جامعة آل البيت – المفرق.</li>
+                </ul>
 
-        <p><strong>المؤلفات:</strong></p>
-        <ul>
-            <li><strong>📘 كتاب:</strong> حق العدول ضمانًا لحماية المستهلك – دراسة وصفية تحليلية مقارنة في ضوء التشريعين الأردني والفرنسي.</li>
-            <li><strong>📄 بحث:</strong> المسؤولية المدنية الناجمة عن أضرار الطائرات بدون طيار – مقدم لنقابة المحامين النظاميين.</li>
-            <li>عدة أبحاث قانونية متخصصة أُعدّت أثناء دراسة الماجستير.</li>
-        </ul>
+                <h3>الخبرات:</h3>
+                <ul>
+                    <li>محامٍ نظامي متدرب لدى نقابة المحامين النظاميين الأردنيين.</li>
+                 </ul>
+                    <li>محامٍ شرعي متدرب لدى دائرة قاضي القضاة.</li>
+                </ul>
+
+                <h3>المؤلفات:</h3>
+                <ul>
+                    <li>📘 <strong>كتاب:</strong> حق العدول ضمانًا لحماية المستهلك – دراسة وصفية تحليلية مقارنة في ضوء التشريعين الأردني والفرنسي.</li>
+                 </ul>
+                    <li>📄 <strong>بحث:</strong> المسؤولية المدنية الناجمة عن أضرار الطائرات بدون طيار – مقدم لنقابة المحامين النظاميين.</li>
+                 </ul>
+                    <li>📝 عدة أبحاث قانونية متخصصة أُعدّت أثناء دراسة الماجستير.</li>
+                </ul>
+            </div>
+        </div>
     </section>
 
+    <!-- تذييل الصفحة -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3>البارن للقانون والتحكيم</h3>
+                <p>مكتب المحامي ليث خلف الفالح</p>
+            </div>
+            <div class="footer-links">
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+        <p class="copyright">© 2024 جميع الحقوق محفوظة</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
